@@ -5,11 +5,14 @@
 :root,
 [data-theme] {
   background: hsl(var(--b2));
-  --green400:#962DFF;
+  font-family: roboto;
+
+  --green400:#79DD7E;
   --grassstaingreen400: #CAF729;
   --greenFirstPost400: #04CD00;
-  --MermaidTreasure400: #21B6B6;
-
+  --mermaidTreasure400: #21B6B6;
+  --portage400: #FF002F;
+  --palatinateBlue400: #2940e5;
 }
 
 body {
@@ -22,7 +25,6 @@ h3,
 h4 {
   margin-bottom: 0.5rem;
   line-height: 1;
-  color: var(--green400)
 }
 
 p {
@@ -36,3 +38,4 @@ p {
 .btn.btn-ghost {
   @apply shadow-none;
 }
+
