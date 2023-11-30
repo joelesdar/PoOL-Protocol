@@ -61,7 +61,7 @@ export const Header = () => {
   return (
     <>
       <div className="container-flex text-center">
-        <div className="row align-items-start bg-primary-subtle p-0 h-20 shadow mb-5 bg-white ">
+        <div className="row align-items-start bg-primary-subtle p-0 h-20 shadow mb-4 bg-white ">
           <div className="col-1 p-2">
             <img className="rounded float-start" src="/marca_pool.svg" alt="logo" width={90} />
           </div>
