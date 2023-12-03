@@ -17,10 +17,13 @@ export const Footer = () => {
               Inicio
             </a>
             <a href="#" className="list-group-item">
-              Blog
+              Perfil
             </a>
             <a href="#" className="list-group-item">
               Comunidad
+            </a>
+            <a href="#" className="list-group-item">
+              Blog
             </a>
             <a href="#" className="list-group-item">
               FAQ
