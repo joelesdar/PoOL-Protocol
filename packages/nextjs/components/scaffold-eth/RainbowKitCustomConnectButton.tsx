@@ -91,10 +91,10 @@ export const RainbowKitCustomConnectButton = () => {
                       {chain.name}
                     </span>
                   </div>
-                  <div className="dropdown dropdown-end leading-3">
+                  <div className="dropdown dropdown-end leading-3 bg-black">
                     <label
                       tabIndex={0}
-                      className="btn btn-secondary btn-sm pl-0 pr-2 shadow-md dropdown-toggle gap-0 !h-auto"
+                      className="btn btn-secondary btn-sm pl-0 pr-2 shadow-md dropdown-toggle gap-0 !h-auto bg-white"
                     >
                       <BlockieAvatar address={account.address} size={30} ensImage={account.ensAvatar} />
                       <span className="ml-2 mr-1">{account.displayName}</span>

@@ -10,10 +10,10 @@ import { RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
 export const Header = () => {
   return (
     <>
-      <div className="container-fluid align-items-center bg-gray-100 h-30">
+      <div className="container-fluid align-items-center bg-dark border-bottom border-body">
         <div className="d-flex">
           <div className="col-9">
-            <nav className="navbar navbar-expand-md navbar-light">
+            <nav className="navbar navbar-expand-md bg-dark border-bottom border-body" data-bs-theme="dark">
               <div className="container-fluid">
                 <button
                   className="navbar-toggler"
@@ -61,7 +61,7 @@ export const Header = () => {
               </div>
             </nav>
           </div>
-          <div className="d-flex col-3">
+          <div className="d-flex">
             <RainbowKitCustomConnectButton />
           </div>
         </div>
