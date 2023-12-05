@@ -11,9 +11,8 @@ const Home: NextPage = () => {
               <h1 className="container text-center pt-1">Proof of ownership and learning</h1>
               <h3 className="text-center pt-3">Valida los registros de tus logros de tus estuiantes y trabajadores.</h3>
               <br></br>
-
               <h3 className="text-center pb-5">
-                Con nosotros lo haces posible la validaciónde los mismos a través de la blockchain
+                Con nosotros lo haces posible la validación de los mismos a través de la blockchain
               </h3>
             </div>
 
