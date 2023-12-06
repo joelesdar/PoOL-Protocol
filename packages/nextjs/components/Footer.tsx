@@ -69,6 +69,7 @@ export const Footer = () => {
           <p className="text-white text-center">
             Hecho por LatinoAmericanos con <HeartIcon className="inline-block h-4 w-4" /> para el mundo
           </p>
+          <p className="text-white text-center h-10">Todos los derechos reservados © 2023</p>
         </div>
       </div>
     </>

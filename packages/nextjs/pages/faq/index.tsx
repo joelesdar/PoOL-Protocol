@@ -1,5 +1,7 @@
 const Faq = () => {
-  return <h1>faq</h1>;
+  return (
+    <img src="../pagina_construccion.svg" className="card-img-top pagina_construccion img-fluid mx-auto" alt="..." />
+  );
 };
 
 export default Faq;

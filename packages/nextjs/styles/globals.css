@@ -136,4 +136,16 @@ section{
 
 .foto_perfil{
   width: 4rem;
+  height:4rem;
+}
+
+.img_card{
+  padding-top: 1rem;
+  width: 8rem;
+}
+
+.pagina_construccion{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 20rem;
 }

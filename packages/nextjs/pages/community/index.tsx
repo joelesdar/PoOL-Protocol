@@ -1,5 +1,7 @@
 const Community = () => {
-  return <h1>comunidad</h1>;
+  return (
+    <img src="../pagina_construccion.svg" className="card-img-top pagina_construccion img-fluid mx-auto" alt="..." />
+  );
 };
 
 export default Community;
