@@ -90,6 +90,10 @@ p {
   margin: 0;
 }
 
+.p1{
+  font-size: 0.7rem;
+}
+
 .btn {
   @apply shadow-md;
 }
@@ -127,4 +131,9 @@ section{
 
 .hardhat_button{
   background-color: #212529;
+}
+
+
+.foto_perfil{
+  width: 4rem;
 }

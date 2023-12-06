@@ -1,6 +1,6 @@
 import React from "react";
 //import Image from "next/image";
-//import Link from "next/link";
+import Link from "next/link";
 //import { useRouter } from "next/router";
 import { RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
 
@@ -12,7 +12,7 @@ export const Header = () => {
     <>
       <div className="container-fluid align-items-center bg-dark border-bottom border-body">
         <div className="d-flex">
-          <div className="col-9">
+          <div className="col">
             <nav className="navbar navbar-expand-md bg-dark border-bottom border-body" data-bs-theme="dark">
               <div className="container-fluid">
                 <button
@@ -32,29 +32,34 @@ export const Header = () => {
                   </a>
                   <ul className="navbar-nav me-auto mb-lg-0">
                     <li className="nav-item">
-                      <a className="nav-link" href="#">
+                      <Link className="nav-link" href="/">
                         Inicio
-                      </a>
+                      </Link>
+                      <a className="nav-link" href="#"></a>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#">
+                      <Link className="nav-link" href="profile">
                         Perfil
-                      </a>
+                      </Link>
+                      <a className="nav-link" href="#"></a>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#">
+                      <Link className="nav-link" href="community">
                         Comunidad
-                      </a>
+                      </Link>
+                      <a className="nav-link" href="#"></a>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#">
+                      <Link className="nav-link" href="blog">
                         Blog
-                      </a>
+                      </Link>
+                      <a className="nav-link" href="#"></a>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#">
+                      <Link className="nav-link" href="faq">
                         FAQ
-                      </a>
+                      </Link>
+                      <a className="nav-link" href="#"></a>
                     </li>
                   </ul>
                 </div>

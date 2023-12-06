@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { HeartIcon } from "@heroicons/react/24/outline";
 
 /**
@@ -9,7 +10,7 @@ export const Footer = () => {
     <>
       <div className="container-fluid align-items-center bg-dark border-bottom border-body">
         <div className="d-flex">
-          <div className="col-9">
+          <div className="col-12">
             <nav className="navbar navbar-expand-md bg-dark border-bottom border-body" data-bs-theme="dark">
               <div className="container-fluid">
                 <button
@@ -29,29 +30,34 @@ export const Footer = () => {
                   </a>
                   <ul className="navbar-nav me-auto mb-lg-0">
                     <li className="nav-item">
-                      <a className="nav-link" href="#">
+                      <Link className="nav-link" href="/">
                         Inicio
-                      </a>
+                      </Link>
+                      <a className="nav-link" href="#"></a>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#">
+                      <Link className="nav-link" href="profile">
                         Perfil
-                      </a>
+                      </Link>
+                      <a className="nav-link" href="#"></a>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#">
+                      <Link className="nav-link" href="community">
                         Comunidad
-                      </a>
+                      </Link>
+                      <a className="nav-link" href="#"></a>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#">
+                      <Link className="nav-link" href="blog">
                         Blog
-                      </a>
+                      </Link>
+                      <a className="nav-link" href="#"></a>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#">
+                      <Link className="nav-link" href="faq">
                         FAQ
-                      </a>
+                      </Link>
+                      <a className="nav-link" href="#"></a>
                     </li>
                   </ul>
                 </div>
@@ -59,7 +65,7 @@ export const Footer = () => {
             </nav>
           </div>
         </div>
-        <div className="">
+        <div className="container-fluid">
           <p className="text-white text-center">
             Hecho por LatinoAmericanos con <HeartIcon className="inline-block h-4 w-4" /> para el mundo
           </p>
