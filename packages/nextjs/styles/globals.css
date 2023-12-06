@@ -5,6 +5,55 @@
 :root,
 [data-theme] {
   background: hsl(var(--b2));
+  font-family: roboto;
+
+/*GreenXXX*/
+
+  --gree400:#63EF6A;
+  --gree300:#79DD7e;
+  --gree200:#A0E7A4;
+  --gree100:#EEFAEF;
+
+
+  --greenFirstPost400: #04CD00;
+  --greenFirstPost300: #76E0C9;
+  --greenFirstPost200: #9EE9D9;
+  --greenFirstPost100: #C6F2E8;
+
+
+
+/*YellowXXX*/
+  --grassstaingreen400: #CAF729;
+  --grassstaingreen300: #D7F85D;
+  --grassstaingreen200: #E2FA8C;
+  --grassstaingreen100: #EEFCBC;
+
+
+/*BlueXXX*/
+  --palatinateBlue400: #2940e5;
+  --palatinateBlue300: #3e52e7;
+  --palatinateBlue200: #6979ec;
+  --palatinateBlue100: #95a0f2;
+
+
+
+  --mermaidTreasure400: #21B6B6;
+  --mermaidTreasure300: #47dddd;
+  --mermaidTreasure200: #71e5e5;
+  --mermaidTreasure100: #c4f4f4;
+
+
+/*ViolaXXX*/
+--palatinateBlue400: #888DDA;
+--palatinateBlue300: #7f84d7;
+--palatinateBlue200: #a4a8e2;
+--palatinateBlue100: #caccee;
+
+
+/*Varius*/
+  --logocolor: #2940E5;
+  --portage400: #FF002F;
+  --granite: #B7B8B6;
 }
 
 body {
@@ -17,10 +66,28 @@ h3,
 h4 {
   margin-bottom: 0.5rem;
   line-height: 1;
+  font-family: roboto;
 }
 
+
+h1{
+  font-size: 2.5rem;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+h3{
+  font-size: 1.5rem;
+}
+
+
+
+
 p {
-  margin: 1rem 0;
+  font-family: roboto;
+  margin: 0;
 }
 
 .btn {
@@ -29,4 +96,35 @@ p {
 
 .btn.btn-ghost {
   @apply shadow-none;
+}
+
+
+
+.nav-link {
+  color: white;
+}
+
+.hero{
+  height: auto;
+  background: var(--grassstaingreen300);
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.title_1{
+  align-items: center;
+}
+
+.imagen_1{
+  width: auto;
+}
+
+.hardhat_button{
+  background-color: #212529;
 }

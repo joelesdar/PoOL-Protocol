@@ -1,115 +1,72 @@
-import React, { useCallback, useRef, useState } from "react";
-import Image from "next/image";
+import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import styled from "@emotion/styled";
-import { Bars3Icon, BugAntIcon } from "@heroicons/react/24/outline";
-import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
-import { useOutsideClick } from "~~/hooks/scaffold-eth";
-
-const StyledHeader = styled.div`
-  background-color: #175a94;
-`;
-
-interface HeaderMenuLink {
-  label: string;
-  href: string;
-  icon?: React.ReactNode;
-}
-
-export const menuLinks: HeaderMenuLink[] = [
-  {
-    label: "Inicio",
-    href: "/",
-  },
-  {
-    label: "Debug Contracts",
-    href: "/debug",
-    icon: <BugAntIcon className="h-4 w-4" />,
-  },
-];
-
-export const HeaderMenuLinks = () => {
-  const router = useRouter();
-
-  return (
-    <>
-      {menuLinks.map(({ label, href, icon }) => {
-        const isActive = router.pathname === href;
-        return (
-          <li key={href}>
-            <Link
-              href={href}
-              passHref
-              className={`${
-                isActive ? "bg-secondary shadow-md" : ""
-              } hover:bg-secondary hover:shadow-md focus:!bg-secondary active:!text-neutral py-1.5 px-3 text-sm rounded-full gap-2 grid grid-flow-col`}
-            >
-              {icon}
-              <span>{label}</span>
-            </Link>
-          </li>
-        );
-      })}
-    </>
-  );
-};
+//import Image from "next/image";
+//import { useRouter } from "next/router";
+import { RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
 
 /**
  * Site header
  */
 export const Header = () => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const burgerMenuRef = useRef<HTMLDivElement>(null);
-  useOutsideClick(
-    burgerMenuRef,
-    useCallback(() => setIsDrawerOpen(false), []),
-  );
-
   return (
-    <StyledHeader>
-      <div className="navbar">
-        <div className="navbar-start w-auto lg:w-1/2">
-          <div className="lg:hidden dropdown" ref={burgerMenuRef}>
-            <label
-              tabIndex={0}
-              className={`ml-1 btn btn-ghost ${isDrawerOpen ? "hover:bg-secondary" : "hover:bg-transparent"}`}
-              onClick={() => {
-                setIsDrawerOpen(prevIsOpenState => !prevIsOpenState);
-              }}
-            >
-              <Bars3Icon className="h-1/2" />
-            </label>
-            {isDrawerOpen && (
-              <ul
-                tabIndex={0}
-                className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
-                onClick={() => {
-                  setIsDrawerOpen(false);
-                }}
-              >
-                <HeaderMenuLinks />
-              </ul>
-            )}
+    <>
+      <div className="container-fluid align-items-center bg-dark border-bottom border-body">
+        <div className="d-flex">
+          <div className="col-9">
+            <nav className="navbar navbar-expand-md bg-dark border-bottom border-body" data-bs-theme="dark">
+              <div className="container-fluid">
+                <button
+                  className="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbar-toggler"
+                  aria-controls="navbarTogglerDemo01"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbar-toggler">
+                  <a className="navbar-brand" href="#">
+                    <img src="/marca_pool.svg" className="" alt="logo" width="90" />
+                  </a>
+                  <ul className="navbar-nav me-auto mb-lg-0">
+                    <li className="nav-item">
+                      <a className="nav-link" href="#">
+                        Inicio
+                      </a>
+                    </li>
+                    <li className="nav-item">
+                      <Link className="nav-link" href="profile">
+                        Perfil
+                      </Link>
+                      <a className="nav-link" href="#"></a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="#">
+                        Comunidad
+                      </a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="#">
+                        Blog
+                      </a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="#">
+                        FAQ
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
           </div>
-          <Link href="/" passHref className="hidden lg:flex items-center gap-2 ml-4 mr-6 shrink-0">
-            <div className="flex relative w-10 h-10">
-              <Image alt="SE2 logo" className="cursor-pointer" fill src="/logo.svg" />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-bold leading-tight">Scaffold-ETH</span>
-              <span className="text-xs">Ethereum dev stack</span>
-            </div>
-          </Link>
-          <ul className="hidden lg:flex lg:flex-nowrap menu menu-horizontal px-1 gap-2">
-            <HeaderMenuLinks />
-          </ul>
-        </div>
-        <div className="navbar-end flex-grow mr-4">
-          <RainbowKitCustomConnectButton />
-          <FaucetButton />
+          <div className="d-flex">
+            <RainbowKitCustomConnectButton />
+          </div>
         </div>
       </div>
-    </StyledHeader>
+    </>
   );
 };
