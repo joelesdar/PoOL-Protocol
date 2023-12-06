@@ -9,9 +9,6 @@ import { useOutsideClick } from "~~/hooks/scaffold-eth";
 
 const StyledHeader = styled.div`
   background-color: #175a94;
-  p {
-    color: black;
-  }
 `;
 
 interface HeaderMenuLink {
